@@ -1,0 +1,30 @@
+{
+  "name": "react-webpack-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server",
+    "dist": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xiltyn/react-webpack-starter.git"
+  },
+  "author": "JB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xiltyn/react-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/Xiltyn/react-webpack-starter#readme",
+  "devDependencies": {
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.14.0",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
