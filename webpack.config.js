@@ -7,8 +7,7 @@ module.exports = {
 	entry: './src/app.tsx',
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: './app.bundle.js',
-		publicPath: '/src/assets/'
+		filename: './app.bundle.js'
 	},
 	resolve: {
 		extensions: [".ts", ".tsx", ".js", ".css", ".scss", ".jpg", ".png"],
