@@ -25,6 +25,7 @@ export default class Content extends React.Component <any, any> {
 			<div className="content">
 				<h1>Hello, this is the content component talking</h1>
 				<h2>Click on the button below, trust me ;)</h2>
+				<h3>Whoah! We can use images now too!</h3>
 				<button onClick={this.handleClick}>{message}</button>
 			</div>
 		)

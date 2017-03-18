@@ -7,16 +7,20 @@ module.exports = {
 	entry: './src/app.tsx',
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: './app.bundle.js'
+		filename: './app.bundle.js',
+		publicPath: '/src/assets/'
 	},
 	resolve: {
-		extensions: [".ts", ".tsx", ".js", ".css", ".scss"]
+		extensions: [".ts", ".tsx", ".js", ".css", ".scss", ".jpg", ".png"],
+		alias: {
+			'images': path.resolve(__dirname, '/src/assets/images')
+		}
 	},
 	module: {
 		rules: [
 			{
 				test: /\.scss$/,
-				exclude: /node_modules/,
+				include: path.join(__dirname, 'src'),
 				use: [
 					'style-loader',
 					'css-loader',
@@ -32,6 +36,11 @@ module.exports = {
 				test: /\.tsx$/,
 				exclude: /node_modules/,
 				loader: 'ts-loader'
+			},
+			{
+				test: /\.(jpg|png)$/,
+				include: path.join(__dirname, 'src'),
+				loader: 'file-loader'
 			}
 		]
 	},
