@@ -1,7 +1,7 @@
 /**
  * Created by Xiltyn on 15.03.2017.
  */
-import './assets/scss/main.scss';
+import './assets/scss/main';
 
 import * as React from 'react';
 import * as ReactDom from 'react-dom';

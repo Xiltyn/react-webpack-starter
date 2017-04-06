@@ -11,15 +11,12 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [".ts", ".tsx", ".js", ".css", ".scss", ".jpg", ".png"],
-		alias: {
-			'images': path.resolve(__dirname, '/src/assets/images')
-		}
 	},
 	module: {
 		rules: [
 			{
 				test: /\.scss$/,
-				include: path.join(__dirname, 'src'),
+				include: path.join(__dirname, 'src/assets/scss'),
 				use: [
 					'style-loader',
 					'css-loader',
@@ -37,9 +34,17 @@ module.exports = {
 				loader: 'ts-loader'
 			},
 			{
-				test: /\.(jpg|png)$/,
+				test: /\.(jpg|png|svg)$/,
 				include: path.join(__dirname, 'src'),
 				loader: 'file-loader'
+			},
+			{
+				test: /\.(woff|woff2)$/,
+				loader: 'url-loader',
+				options: {
+					limit: 50000,
+					name: './assets/fonts/[name].[ext]'
+				}
 			}
 		]
 	},
@@ -66,7 +71,7 @@ module.exports = {
 		new ExtractTextPlugin(
 			{
 				filename: 'main.bundle.css',
-				disable: true,
+				disable: false,
 				allChunks: true
 			}
 		),

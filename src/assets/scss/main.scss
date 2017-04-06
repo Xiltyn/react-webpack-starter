@@ -1,28 +1,19 @@
+@import "fonts";
+
+@import "core/normalize";
+@import "core/variables";
+@import "core/typography";
+
+@import "grid/mobile";
+@import "grid/tablet";
+@import "grid/desktop";
+@import "grid/largeDesktop";
+
 html {
-	font-size: 62.5%;
-	body {
-		margin:0;
-		padding:0;
-		background-image: url("../images/pic_1.jpg");
-		background-size: cover;
-		background-position: top;
-		background-repeat: no-repeat;
-		color: #fff;
-		h1 {
-			margin:0;
-			padding:0;
-			font-size: 4.8rem;
-		}
-		p {
-			margin:0;
-			padding:0;
-			font-size: 1.6rem;
-		}
-	}
+	color: #fff;
+	overflow: hidden;
+	font-family: $fontMain;
 }
-.content {
-	width: 100vw;
-	height: 100vh;
-	margin: 0;
-	background-color: rgba(0,0,0,0.6);
-}
+
+
+
